@@ -9,9 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "framer-motion": "^10.2.5",
+    "mongodb": "^5.1.0",
+    "next": "13.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.5",
+    "rehype-raw": "^6.1.1",
+    "remark-gfm": "^3.0.1",
+    "styled-components": "^5.3.9",
+    "styled-reset": "^4.4.5"
   },
   "devDependencies": {
     "eslint": "8.14.0",
