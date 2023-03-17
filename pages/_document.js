@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
           <>
             <link rel="stylesheet" href="/font/pretendard/pretendard-subset.css" />
             <link rel="stylesheet" href="/font/montserrat/style.css" />
+            <link rel="stylesheet" href="/font/nanumgothiccoding/stylesheet.css" />
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>

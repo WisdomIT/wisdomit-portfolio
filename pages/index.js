@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styled from 'styled-components'
-import { useRouter } from 'next/router'
 import MotionMain from "@/components/motionmain";
 import { useState, useEffect } from 'react';
 import { connectToDatabase } from '@/lib/mongodb';
@@ -10,6 +9,7 @@ import SectionPortfolio from '@/components/sectionPortfolio';
 import SectionTechStack from '@/components/sectionTechstack';
 import SectionAbout from '@/components/sectionAbout';
 import SectionContact from '@/components/sectionContact';
+import { useRouter } from 'next/router'
 
 export const getServerSideProps = async (context) => {
     
@@ -19,7 +19,7 @@ export const getServerSideProps = async (context) => {
 
   const db = client.db("wisdomit");
   
-  let data = await db.collection("portfolio").find().toArray()
+  let data = await db.collection("portfolio").find().sort({num: 1}).toArray()
   data.forEach(e => delete e.body)
 
   return {
@@ -38,6 +38,19 @@ export default function Home(props) {
     document.querySelector(`#${item}`).scrollIntoView({ behavior: 'smooth', block: 'start' })
     setNav(item)
   }
+
+  const router = useRouter()
+  useEffect(() => {
+    
+    if(router.asPath !== '/'){
+      const path = router.asPath.substring(2)
+
+      window.history.replaceState({}, null, '/');
+      document.querySelector(`#${path}`).scrollIntoView({ behavior: 'smooth', block: 'start' })
+      setNav(path)
+    }
+
+  },[])
 
   return (
     <>

@@ -3,6 +3,7 @@ import { device } from '@/styles/global-style';
 import SectionName from '@/components/sectionName';
 import { useRef } from 'react'
 import { useInView } from 'framer-motion';
+import { useRouter } from 'next/router'
 
 const Section = styled.div`
     width: 100vw;
@@ -75,7 +76,9 @@ const PortfolioItem = (props) => {
     const data = props.data
 
     const ref = useRef(null)
-    const isInView = useInView(ref, { once: true, amount: 1 })
+    const isInView = useInView(ref, { once: true, amount: 0.5 })
+
+    const router = useRouter()
 
     return <PortfolioItemDiv ref={ref} style={{
         transform: isInView ? "none" : "translateY(50px)",
@@ -90,7 +93,7 @@ const PortfolioItem = (props) => {
             <PortfolioItemSummary>{data.summary}</PortfolioItemSummary>
             <PortfolioItemBtns>
                 {data.link !== null ? <PortfolioItemBtn href={data.link} target="_blank">방문하기</PortfolioItemBtn> : <></>}
-                <PortfolioItemBtn blue>더 알아보기</PortfolioItemBtn>
+                <PortfolioItemBtn onClick={() => router.push(`/portfolio/${data.num}`)} blue>더 알아보기</PortfolioItemBtn>
             </PortfolioItemBtns>
         </PortfolioItemData>
     </PortfolioItemDiv>
