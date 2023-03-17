@@ -18,6 +18,8 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: (
           <>
+            <link rel="stylesheet" href="/font/pretendard/pretendard-subset.css" />
+            <link rel="stylesheet" href="/font/montserrat/style.css" />
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>

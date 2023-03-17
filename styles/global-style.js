@@ -28,7 +28,8 @@ export const GlobalStyles = createGlobalStyle`
         --blue20: rgba(0, 140, 255, 0.2);
         --blue50: rgba(0, 140, 255, 0.5);
         --blue80: rgba(0, 140, 255, 0.8);
-        --linear-blue: linear-gradient(96.03deg, #00D1FF 6.74%, #0085FF 28.36%);
+        --linear-blue: linear-gradient(0deg, #00D1FF 0%, #0085FF 100%);
+        --webkit-linear-blue: -webkit-linear-gradient(0deg, #00D1FF 0%, #0085FF 100%);
         --linear-black1: linear-gradient(180deg, #000 0%, #111 100%);
         --linear-black2: linear-gradient(180deg, #000 0%, #222 100%);
         --blur: blur(30px);
@@ -70,6 +71,7 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0px;
         width: 100%;
         height: 100%;
+        overflow-x: hidden;
     }
 
     body {
@@ -77,13 +79,13 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     ::-webkit-scrollbar {
-        width: 5px;  /* 세로축 스크롤바 길이 */
-        height: 5px;  /* 가로축 스크롤바 길이 */
+        width: 8px;  /* 세로축 스크롤바 길이 */
+        height: 8px;  /* 가로축 스크롤바 길이 */
     }
 
     ::-webkit-scrollbar-thumb {
         background-color: var(--black10);
-        border: 1px solid var(--black10);
+        border: 1px solid var(--white10);
         border-radius: 10px;
     }
 `
