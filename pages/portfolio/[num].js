@@ -281,14 +281,19 @@ const PortfolioSummary = styled.p`
         margin-bottom: 20px;
     }
 
-    @media ${device.tablet} {
-        font-size: 16px;
-        line-height: 28px;
-        margin-bottom: 20px;
-    }
     
+
+    @media ${device.tablet} {
+            font-size: 17px;
+            line-height: 28px;
+            margin-bottom: 28px;
+        }
+
     @media ${device.desktop} {
         padding: 0px 40px;
+        font-size: 19px;
+        line-height: 32px;
+        margin-bottom: 28px;
     }
 `
 
@@ -332,34 +337,37 @@ const PortfolioMarkdown = styled(ReactMarkdown)`
         }
 
         @media ${device.tablet} {
-            font-size: 16px;
+            font-size: 17px;
             line-height: 28px;
-            margin-bottom: 16px;
+            margin-bottom: 28px;
+        }
+
+        @media ${device.desktop} {
+            font-size: 19px;
+            line-height: 32px;
+            margin-bottom: 28px;
         }
     }
 
     & ul, & ol {
-
-        border: 2px solid var(--black10);
-        border-radius: 12px;
         
         @media ${device.mobile} {
             margin: 0px;
             margin-bottom: 20px;
-            padding: 8px;
-            padding-left: 24px;
+            padding: 0px;
+            padding-left: 8px;
         }
 
         @media ${device.tablet} {
             margin: 0px;
-            margin-bottom: 16px;
-            padding: 12px;
-            padding-left: 24px;
+            margin-bottom: 28px;
+            padding: 0px;
+            padding-left: 5px;
         }
     }
 
     & li {
-        font-weight: 400;
+        font-weight: 300;
         
         @media ${device.mobile} {
             font-size: 12px;
@@ -368,9 +376,15 @@ const PortfolioMarkdown = styled(ReactMarkdown)`
         }
 
         @media ${device.tablet} {
-            font-size: 14px;
-            line-height: 14px;
-            margin: 8px;
+            font-size: 17px;
+            line-height: 17px;
+            margin: 16px;
+        }
+
+        @media ${device.desktop} {
+            font-size: 19px;
+            line-height: 19px;
+            margin: 16px;
         }
     }
 

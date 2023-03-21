@@ -130,6 +130,7 @@ const PortfolioItemThumbnail = styled.img`
 
     object-fit: cover;
     border-radius: 20px;
+    border: 1px solid var(--black10);
 
     @media ${device.mobile} {
         width: 100%;
