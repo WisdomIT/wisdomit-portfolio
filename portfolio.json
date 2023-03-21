@@ -1,0 +1,190 @@
+[{
+  "_id": {
+    "$oid": "641079ba44b51fe390b84758"
+  },
+  "num": 1,
+  "title": "BIGHEAD 산업도시",
+  "year": 2022,
+  "type": "personal",
+  "tag": [
+    "web",
+    "php",
+    "node.js",
+    "rcon"
+  ],
+  "link": "https://bighead033.com",
+  "summary": "Node.js + DB를 이용한 마인크래프트 게임 시스템과의 웹 연동 구성을 통해 게임과 웹이 상호 작용할 수 있도록 구현한 사례입니다.\n게임 내 데이터를 실시간으로 화면에 띄워주거나, 웹에서 게임으로 특정 동작을 전송할 수도 있습니다.",
+  "thumbnail": "bighead",
+  "body": {
+    "intro": {
+      "type": "youtube",
+      "src": "https://www.youtube.com/embed/oIG7m8MdUds?start=1600"
+    },
+    "markdown": "## INTRO\n\n본 프로젝트는 제가 '빅헤드'라는 유튜버의 시청자 참여 마인크래프트 게임 서버를 열면서 시작되었습니다.\n\n시청자 참여형 컨텐츠의 경우, 대부분 선착순 혹은 요구조건에 맞는 일부 시청자만 컨텐츠에 직접적으로 참여할 수 있으며\n이외 나머지 시청자는 영상이나 방송으로만 컨텐츠를 접할 수 있다는 점을 단점이라고 생각합니다.\n\n저는 이 단점을 해결하기 위해 모든 사용자가 간접적으로 접근할 수 있는 방법을 어떻게 만들 수 있을까 고민하다, 홈페이지를 통해 게임과 실시간 연동되는 형태면 재미있을것이라 판단해 본 프로젝트를 기획하게 되었습니다.\n\n## TECH STACK\n\n* PHP\n* Javascript\n* CSS\n* MySQL\n* Node.js\n* RCON (마인크래프트 명령어 전송 프로토콜)\n\n## PROBLEMS\n\n본 프로젝트에서 가장 큰 과제는 게임 서버와 웹을 연동하여, 인게임 데이터를 실시간으로 웹에서 보여주고\n또 웹에서 명령어를 전송해 게임 내에서 특정한 동작을 수행하는 것이었습니다.\n\n하지만 이를 위해선 보통 모드 혹은 플러그인으로 연동되도록 하지만, 마인크래프트는 JAVA 기반의 게임으로 모드 역시 마찬가지로 JAVA로 제작되어야 했고 저는 아직 JAVA 개발 경험이 부족하고 최대한 빠른 시간 안에 구현하는 것을 목표로 했기 때문에 다른 방법을 찾아야 했습니다.\n\n## SOLUTION\n\n마인크래프트 게임 서버와 웹을 연동하기 위해선 크게 세가지 방법이 있습니다.\n\n1. 게임 안에 모드로 웹서버를 구현해 게임 시스템을 웹으로 시현\n2. 별도 웹서버 + 게임 모드를 통한 연동\n3. 별도 웹서버 + 외부 명령어 전송 프로토콜을 통한 연동\n\n저는 이 중 3번째 방법인 **별도 웹서버 + 외부 명령어 전송 프로토콜을 통한 연동**을 선택했습니다.\n\n마인크래프트는 명령어를 통해 인벤토리를 조회하거나 캐릭터를 텔레포트시킬 수 있고, `RCON`이라는 원격 명령어 전송 프로토콜이 있어 어떤 언어든 RCON을 이용해 게임 명령어를 수행하고, 이에 대한 반환값을 받을 수 있었습니다.\n\n다만 인게임 내에서 이벤트 리스닝이 힘들었기 때문에, 모든 과정은 웹에서 시작되도록 설계해야 했습니다.\n\n본 프로젝트에서 제가 구현한 기능은 세가지입니다\n\n* 웹 지도 구현 및 플레이어 위치 실시간 시현\n* 게임 내 특정 상자를 조회하여 상자 안 아이템을 홈페이지에서 조회\n* 홈페이지 버튼을 통해 게임 내에서 텔레포트기능 구현\n\n여기서 웹 지도의 경우 마인크래프트 게임의 모드로 제작된 dynmap 서비스를 이용해 구현했습니다."
+  }
+},{
+  "_id": {
+    "$oid": "64131a1d8f97b9a96ac0e6dd"
+  },
+  "num": 2,
+  "title": "QDUO TOUCH Mapper",
+  "year": 2022,
+  "type": "personal",
+  "tag": [
+    "web",
+    "js",
+    "css"
+  ],
+  "link": "https://qduo.uur.co.kr",
+  "summary": "웹앱 형태의 인터랙티브한 웹사이트 제작 사례입니다.\n디바이스에 들어갈 JSON형태의 세팅 파일을 만들어주는 페이지로, 아이콘을 실시간 검색하거나 키보드 이벤트를 받아 매크로로 만들어주는 등 앱처럼 느껴지게끔 사용자와 적극적으로 상호작용하도록 페이지를 구성했습니다.",
+  "thumbnail": "qduoweb",
+  "body": {
+    "intro": {
+      "type": "image",
+      "src": "qduoweb.png"
+    },
+    "markdown": "## PROBLEM"
+  }
+},{
+  "_id": {
+    "$oid": "641324ca8f97b9a96ac0e6de"
+  },
+  "num": 4,
+  "title": "BANGON",
+  "year": 2023,
+  "type": "personal",
+  "tag": [
+    "web",
+    "react",
+    "next.js",
+    "node.js"
+  ],
+  "link": "https://bangon.co.kr",
+  "summary": "Node.js를 통한 Youtube, Twitch API 조회 및 Canvas 라이브러리를 통한 백엔드 이미지 생성으로 트위치 스트리머의 현재 방송 여부와 유튜브 최신 영상 썸네일 이미지를 스크립트나 이미지 주소 변경 없이 실시간으로 연동할 수 있는 서비스입니다.",
+  "thumbnail": "bangon",
+  "body": {
+    "intro": {
+      "type": "image",
+      "src": "bangon.png"
+    },
+    "markdown": "## PROBLEM"
+  }
+},{
+  "_id": {
+    "$oid": "641325318f97b9a96ac0e6df"
+  },
+  "num": 5,
+  "title": "HELPCALL",
+  "year": 2022,
+  "type": "personal",
+  "tag": [
+    "app",
+    "react native",
+    "php"
+  ],
+  "link": null,
+  "summary": "자원봉사자의 장애인 지원을 목적으로 만들어진 정부지원 앱의 프로토타입입니다. 백그라운드 위치 및 백그라운드 블루투스를 지원하여 서버와 실시간 연동됩니다. UI / UX 디자인부터 앱 개발까지 1인 제작입니다.",
+  "thumbnail": "helpcall",
+  "body": {
+    "intro": {
+      "type": "image",
+      "src": "helpcall.png"
+    },
+    "markdown": "## PROBLEM"
+  }
+},{
+  "_id": {
+    "$oid": "641327088f97b9a96ac0e6e0"
+  },
+  "num": 6,
+  "title": "QDUO MAPPER",
+  "year": 2019,
+  "type": "personal",
+  "tag": [
+    "desktop program",
+    "node.js",
+    "electron"
+  ],
+  "link": null,
+  "summary": "USB Serial 통신을 통한 USB 디바이스의 내용 조회와 설정 수정용 프로그램입니다.\nWindows, Mac 크로스 플랫폼을 지원하기 위해 Electron 기반으로 제작되었습니다.",
+  "thumbnail": "qduoprogram",
+  "body": {
+    "intro": {
+      "type": "image",
+      "src": "qduoprogram.png"
+    },
+    "markdown": "## PROBLEM"
+  }
+},{
+  "_id": {
+    "$oid": "641328188f97b9a96ac0e6e1"
+  },
+  "num": 7,
+  "title": "POLARIS (가제)",
+  "year": 2022,
+  "type": "team",
+  "tag": [
+    "system",
+    "node.js",
+    "react",
+    "next.js"
+  ],
+  "link": null,
+  "summary": "별도의 슬라이서 없이 자체로 STL파일을 읽어 프린트할 수 있는 3D 프린터 프로젝트입니다.\nNext.js를 이용해 프론트엔드를 제작하고, 별도의 Node.js 모듈을 통해 OS 설정과 파일 데이터를 조회하거나 수정하도록 구성했습니다.",
+  "thumbnail": "polaris",
+  "body": {
+    "intro": {
+      "type": "image",
+      "src": "polaris.png"
+    },
+    "markdown": "## PROBLEM"
+  }
+},{
+  "_id": {
+    "$oid": "641328d18f97b9a96ac0e6e2"
+  },
+  "num": 8,
+  "title": "CES 2023 LG Display 전시 시스템",
+  "year": 2022,
+  "type": "team",
+  "tag": [
+    "system",
+    "php",
+    "js",
+    "network"
+  ],
+  "link": null,
+  "summary": "아이패드를 이용해 여러 컴퓨터의 영상을 싱크플레이 할 수 있는 시스템입니다.\n자체로 제작한 디바이스와 웹서버를 이용해 구동되며, 전시에 필요한 네트워크 시스템까지 직접 구축했습니다.",
+  "thumbnail": "ces",
+  "body": {
+    "intro": {
+      "type": "image",
+      "src": "ces.png"
+    },
+    "markdown": "## PROBLEM"
+  }
+},{
+  "_id": {
+    "$oid": "6415fd16afb2680d005946e0"
+  },
+  "num": 3,
+  "title": "KS COMPANY 랜딩페이지지",
+  "year": 2023,
+  "type": "personal",
+  "tag": [
+    "web",
+    "react",
+    "next.js",
+    "figma"
+  ],
+  "link": "http://ks-company.kr",
+  "summary": "온라인 마케팅 회사 랜딩페이지 외주입니다.\nFigma로 디자인되었으며, Next.js 기반으로 제작되었습니다.\nUI 디자인부터 퍼블리싱까지 1인 제작입니다.",
+  "thumbnail": "kscompany",
+  "body": {
+    "intro": {
+      "type": "image",
+      "src": "kscompany.png"
+    },
+    "markdown": "## PROBLEM"
+  }
+}]
